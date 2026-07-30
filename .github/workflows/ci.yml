@@ -1,25 +1,25 @@
-name: CI pipeline 
+name: CI pipeline
 
 on:
   push:
-      branches:
-          master
+    branches:
+      - master
 
-jobs :
+jobs:
   build:
-  runs-on : ubuntu-latest
-  steps :
-    name: checkout Repository
-    uses : actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    name: Display Welcome Message
-    run : echo "github Actions CI pipeline Executed Successfully!"
+      - name: Display Welcome Message
+        run: echo "GitHub Actions CI pipeline Executed Successfully!"
 
-    name : Display Current Directory 
-    run : pwd
+      - name: Display Current Directory
+        run: pwd
 
-    name : List project Files
-    run : ls -la
+      - name: List project Files
+        run: ls -la
 
-    name : Display completion Message
-    run : echo "Pipeline Comleted Successfully."
+      - name: Display completion Message
+        run: echo "Pipeline Completed Successfully."
